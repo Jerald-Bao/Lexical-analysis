@@ -10,8 +10,17 @@ namespace RE2DFA
     {
         public Dictionary<Symbol,State> transfer;
         public List<State> nullTransfer;
+        public int num;
+        public static int count=0;
         public State()
         {
+            num = count++;
+            transfer = new Dictionary<Symbol, State>();
+            nullTransfer = new List<State>();
+        }
+        public State(int num)
+        {
+            this.num = num;
             transfer = new Dictionary<Symbol, State>();
             nullTransfer = new List<State>();
         }

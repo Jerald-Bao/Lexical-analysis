@@ -6,7 +6,7 @@
         public Automata automata;
         public NFA_ParseTree(ParseTree parseTree)
         {
-            root = (NFA_Node)parseTree.root;
+            root =new NFA_Node(parseTree.root);
             root.BuildAutomata();
             automata = root.automata;
         }
